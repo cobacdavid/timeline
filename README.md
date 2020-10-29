@@ -4,12 +4,12 @@ Produit un timeline à partir d'un json
 
 ## Flux
 
-.json --(LuaLaTeX)--> .tex --> .pdf
+.json --(python)--> .tex --(LuaLaTeX)--> .pdf
 
 ## Aide
 1. Voir le .json exemple
-2. exécuter `python3 timeline.py monFichier.json`
-3. exécuter `lualatex --shell-escape monFichier_timeline.tex`
+2. `python3 timeline.py monFichier.json`
+3. `lualatex --shell-escape monFichier_timeline.tex`
 
 ## Requis
 1. [lib python  PyQRCode](https://pypi.org/project/PyQRCode/) + [lib python pypng](https://pypi.org/project/pypng/)
