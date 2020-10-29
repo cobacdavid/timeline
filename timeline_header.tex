@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+\setotherlanguage{english}
+
+\def\debut((#1,#2),#3,#4,#5,#6){
+  \fill[#6] (#1,#2) -- ++(#3,0) -- ++(#5,#4/2)
+  -- ++(-#5,#4/2)-- ++(-#3,0) -- cycle;
+}
+
+\def\fin((#1,#2),#3,#4,#5,#6){
+  \fill[#6](#1,#2) -- ++(#3,0) -- ++(0,#4)
+  -- ++(-#3,0) -- ++(#5,-#4/2) -- cycle;
+}
+
+\def\milieu((#1,#2),#3,#4,#5,#6){
+  \fill[#6] (#1,#2) -- ++(#3,0) -- ++(#5,#4/2) -- ++(-#5,#4/2)
+  -- ++(-#3,0) -- ++(#5,-#4/2) --cycle;
+}
+
+% \def\traitbas((#1,#2),#3,#4){
+%   \draw[line width=2mm,#4] (#1,#2) -- (#1,#2-#3);
+% }
+
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm]
+  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
