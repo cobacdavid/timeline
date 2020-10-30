@@ -86,12 +86,12 @@ with open(os.path.join(sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
         # le titre
         if i != 0:
             centre_h += f / 2
-            fh.write(tlLTX.chaine_titre(centre_h, position[1] + v / 2,
-                                        h,
-                                        noeud,
-                                        couleurTitre,
-                                        dico_element["titre"]))
-            noeud += 1
+        fh.write(tlLTX.chaine_titre(centre_h, position[1] + v / 2,
+                                    h,
+                                    noeud,
+                                    couleurTitre,
+                                    dico_element["titre"]))
+        noeud += 1
             # le cadre
         fh.write(tlLTX.cadre(centre_h, trait,
                              largeurCadre,
