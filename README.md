@@ -8,8 +8,8 @@ Produit un timeline à partir d'un json
 
 ## Aide
 1. Voir le .json exemple
-2. `python3 timeline.py monFichier.json`
-3. `lualatex --shell-escape monFichier_timeline.tex`
+2. `python3 timeline.py mon/super/chemin/vers/monFichier.json`
+3. création de 2 fichiers : `Makefile` et `mon/super/chemin/vers/monFichier_timeline.pdf`
 
 ## Requis
 1. [lib python  PyQRCode](https://pypi.org/project/PyQRCode/) + [lib python pypng](https://pypi.org/project/pypng/)
