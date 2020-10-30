@@ -5,7 +5,7 @@ OPT_LUALATEX = --shell-escape --interaction=batchmode
 # 
 PDF        = $(TEX_SRC:%.tex=%.pdf)
 # 
-TO_DEL_C   = *.aux *.log *.toc *.lof *.lot *.mpx *.tmp  *.tex qrcode_* *~
+TO_DEL_C   = *.aux *.log *.toc *.lof *.lot *.mpx *.tmp qrcode_* *~ *.tex
 #
 all: $(PDF) clean
 
