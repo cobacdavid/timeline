@@ -120,7 +120,7 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
             else:
                 image_largeur = str(.25 * float(valeurs["largeurCadre"]))
             #
-            if "position" in dico_image["position"]:
+            if "position" in dico_image:
                 image_position = dico_image["position"]
             else:
                 image_position = "east"

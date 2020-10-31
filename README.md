@@ -10,7 +10,7 @@ Produit un timeline à partir d'un json
 `python3 timeline.py mon/super/chemin/vers/monFichier.json`
 
 Création de 2 fichiers : un `Makefile` et
-`monFichier_timeline.pdf`, le tout dans le réperoire du fichier
+`monFichier_timeline.pdf`, le tout dans le répertoire du fichier
 json initial.
 
 ## Requis 
