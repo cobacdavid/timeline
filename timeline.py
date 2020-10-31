@@ -31,10 +31,10 @@ with open(fichier_source) as fh:
 
 # distances globales
 h, v, f, e = map(float,
-                 [dico_tl["tailleH"],
-                  dico_tl["tailleV"],
-                  dico_tl["tailleFleche"],
-                  dico_tl["espaceBloc"]])
+                 [dico_tl["largeurBloc"],
+                  dico_tl["hauteurBloc"],
+                  dico_tl["largeurFleche"],
+                  dico_tl["espaceInterBloc"]])
 
 # pour le nommage des qrcodes
 nb_qrcode = 0
@@ -52,15 +52,18 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
     position = [0, 0]
     noeud = 0
     #
-    valeurs_par_defaut = {"largeurCadre": str(h),
-                          "couleurFond": "black!50",
+    valeurs_par_defaut = {"couleurFond": "black!50",
                           "couleurTitre": "white",
-                          "remplirCadre": False}
+                          "texteTitre": "",
+                          "largeurCadre": str(h),
+                          "hauteurCadre": str(v),
+                          "remplirCadre": False,
+                          "texteCadre": ""}
 
     for i in range(longueur):
         dico_element = dico_tl["contenu"][i]
         #
-        valeurs_par_defaut["trait"] = -5 if i % 2 else -2.5
+        valeurs_par_defaut["hauteurTrait"] = -5 if i % 2 else -2.5
         valeurs = valeurs_par_defaut.copy()
         for k in valeurs_par_defaut:
             valeurs[k] = dico_element.get(k, valeurs[k])
@@ -68,7 +71,7 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
         # trait est à traiter à part... compte tenu de sa valeur
         # par défaut.
         depart_trait = 0
-        arrivee_trait = float(valeurs["trait"])
+        arrivee_trait = float(valeurs["hauteurTrait"])
         ancre = "north"
         if arrivee_trait > 0:
             # on oriente le trait vers le haut
@@ -80,32 +83,24 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
         centre_h = position[0] + h / 2
         #
         # la forme du timeline
-        fh.write(tlLTX.bloc(commande[i],
-                            position, h, v, f, valeurs["couleurFond"]))
+        fh.write(tlLTX.bloc(commande[i], position, h, v, f, valeurs))
         # le titre
         if i != 0:
             centre_h += f / 2
         fh.write(tlLTX.chaine_titre(centre_h, position[1] + v / 2,
                                     h,
                                     noeud,
-                                    valeurs["couleurTitre"],
-                                    dico_element["titre"]))
+                                    valeurs))
         noeud += 1
         # le cadre
-        fh.write(tlLTX.cadre(centre_h, arrivee_trait,
-                             valeurs["largeurCadre"],
-                             noeud,
-                             dico_element["cadre"],
-                             valeurs["couleurFond"],
-                             valeurs["remplirCadre"]))
+        fh.write(tlLTX.cadre(centre_h, arrivee_trait, noeud, valeurs))
         # la liaison
         if arrivee_trait > 0:
             ancre = "south"
         else:
             ancre = "north"
         fh.write(tlLTX.liaison(f"{centre_h},{depart_trait}",
-                                   f"{noeud}.{ancre}",
-                                   valeurs["couleurFond"]))
+                                   f"{noeud}.{ancre}", valeurs))
         # traitement présence d'une image
         if 'imageCadre' in dico_element:
             dico_image = dico_element["imageCadre"]
@@ -113,19 +108,26 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
             if "xoffset" in dico_image:
                 xoffset = dico_image["xoffset"]
             else:
-                xoffset = dico_image["xoffset"]
-                #
+                xoffset = "0"
+            #
             if "yoffset" in dico_image:
                 yoffset = dico_image["yoffset"]
             else:
                 yoffset = "0"
-                ##
-            fh.write(tlLTX.image(dico_image["fichier"],
-                                 noeud,
-                                 dico_image["position"],
-                                 dico_image["largeur"],
-                                 xoffset,
-                                 yoffset))
+            #
+            if "largeur" in dico_image:
+                image_largeur = dico_image["largeur"]
+            else:
+                image_largeur = str(.25 * float(valeurs["largeurCadre"]))
+            #
+            if "position" in dico_image["position"]:
+                image_position = dico_image["position"]
+            else:
+                image_position = "east"
+            ##
+            fh.write(tlLTX.image(dico_image["fichier"], noeud,
+                                 image_position, image_largeur,
+                                 xoffset, yoffset))
         # traitement qrcode
         if "url" in dico_element:
             url = dico_element["url"]
