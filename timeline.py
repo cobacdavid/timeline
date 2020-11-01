@@ -29,12 +29,16 @@ with open(fichier_header) as fh, open(fichier_footer) as ff:
 with open(fichier_source) as fh:
     dico_tl = json.load(fh)
 
-# distances globales
+# distances globales externes
 h, v, f, e = map(float,
                  [dico_tl["largeurBloc"],
                   dico_tl["hauteurBloc"],
                   dico_tl["largeurFleche"],
                   dico_tl["espaceInterBloc"]])
+
+# distances globales internes
+# bbox = [
+# bbox = [(0, 0), (0, 0), (0, 0), (0, 0)]
 
 # pour le nommage des qrcodes
 nb_qrcode = 0

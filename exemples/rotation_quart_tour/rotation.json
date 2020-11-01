@@ -1,0 +1,38 @@
+{
+    "largeurBloc":     "5",
+    "hauteurBloc":     "5",
+    "largeurFleche":   "0",
+    "espaceInterBloc": "0.5",
+    "contenu": [
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10_00.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-3"
+        },
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10_01.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-3.5"
+        },
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10_02.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-4"
+        },
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10_03.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-4.5"
+        },
+        {
+            "texteTitre": "\\includegraphics[width=\\linewidth]{image_de_test_10_04.png}",
+            "hauteurCadre": 4,
+            "hauteurTrait": "-5"
+        }
+    ]
+}
