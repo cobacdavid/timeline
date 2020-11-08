@@ -4,14 +4,16 @@
 \setdefaultlanguage{french}
 \setotherlanguage{english}
 
+% #1 abscisse pt de départ du point gauche/bas
+% #2 ordonnée pt de départ du point gauche/bas
+% #3 largeur
+% #4 hauteur
+% #5 avancement fleche
+% #6 couleur
+
 \def\debut((#1,#2),#3,#4,#5,#6){
   \fill[#6] (#1,#2) -- ++(#3,0) -- ++(#5,#4/2)
   -- ++(-#5,#4/2)-- ++(-#3,0) -- cycle;
-}
-
-\def\fin((#1,#2),#3,#4,#5,#6){
-  \fill[#6](#1,#2) -- ++(#3,0) -- ++(0,#4)
-  -- ++(-#3,0) -- ++(#5,-#4/2) -- cycle;
 }
 
 \def\milieu((#1,#2),#3,#4,#5,#6){
@@ -19,9 +21,23 @@
   -- ++(-#3,0) -- ++(#5,-#4/2) --cycle;
 }
 
-% \def\traitbas((#1,#2),#3,#4){
-%   \draw[line width=2mm,#4] (#1,#2) -- (#1,#2-#3);
-% }
+\def\fin((#1,#2),#3,#4,#5,#6){
+  \fill[#6](#1,#2) -- ++(#3,0) -- ++(0,#4)
+  -- ++(-#3,0) -- ++(#5,-#4/2) -- cycle;
+}
+
+\def\triBas((#1,#2),#3,#4,#5,#6){
+  \fill[#6](#1,#2) -- ++(#3,0) -- ++(-#3/2,#4) --cycle;
+}
+
+\def\triHaut((#1,#2),#3,#4,#5,#6){
+  \fill[#6](#1,#2+#4) -- ++(#3,0) -- ++(-#3/2,-#4) --cycle;
+}
+
+% fonctions de debuggage
+\def\trait((#1,#2),(#3,#4){
+  \draw[fill=red,<->] (#1,#2) -- (#3,#4);
+}
 
 \begin{document}
 \begin{tikzpicture}[x=1cm, y=1cm]

@@ -30,15 +30,20 @@ with open(fichier_source) as fh:
     dico_tl = json.load(fh)
 
 # distances globales externes
-h, v, f, e = map(float,
-                 [dico_tl["largeurBloc"],
-                  dico_tl["hauteurBloc"],
-                  dico_tl["largeurFleche"],
-                  dico_tl["espaceInterBloc"]])
+dim_globales_defaut = {
+    "largeurBloc": 4,
+    "hauteurBloc": 2,
+    "largeurFleche": .5,
+    "espaceInterBloc": 0.1
+}
+dim_globales = dim_globales_defaut.copy()
+for k in dico_tl:
+    if k != "contenu" and k != "codeComplement"\
+       and k != "toutBloc" and k != "touteImage":
+        dim_globales[k] = float(dico_tl[k])
 
-# distances globales internes
-# bbox = [
-# bbox = [(0, 0), (0, 0), (0, 0), (0, 0)]
+if "incrementBloc" not in dico_tl:
+    dim_globales["incrementBloc"] = dim_globales["largeurBloc"]
 
 # pour le nommage des qrcodes
 nb_qrcode = 0
@@ -46,93 +51,135 @@ nb_qrcode = 0
 # écriture du fichier destination .tex
 with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
     fh.write(header)
-    fh.write(tlLTX.chaine_definition_dim(h, v, f, e))
     #
+    # code Tikz / LaTeX à insérer
+    if "codeComplement" in dico_tl:
+        for code in dico_tl["codeComplement"]:
+            fh.write(code + "\n")
+            #
+            #
     longueur = len(dico_tl["contenu"])
-    # fin permet d'avoir un bloc fermé en dernier bloc
-    # 3 possibilités : "debut", "milieu" ou "fin"
-    # on ne laisse pas le choix... à voir
-    commande = ["debut"] + ["milieu"] * (longueur - 2) + ["milieu"]
     position = [0, 0]
     noeud = 0
+    # valeurs par défaut
+    valeurs_par_defaut_script = {
+        "couleurFond":
+        "black!50",
+        "couleurTitre":
+        "white",
+        "largeurBloc":
+        str(dim_globales["largeurBloc"]),
+        "texteTitre":
+        "",
+        "largeurCadre":
+        str(dim_globales["largeurBloc"]),
+        "hauteurCadre":
+        str(dim_globales["hauteurBloc"]),
+        "remplirCadre":
+        False,
+        "texteCadre":
+        "",
+        "xoffset":
+        "0",
+        "yoffset":
+        "0"
+    }
+    # valeurs par défaut précisées par l'utilisateur
+    valeurs_par_defaut = valeurs_par_defaut_script.copy()
+    if "toutBloc" in dico_tl:
+        for k in dico_tl["toutBloc"]:
+            valeurs_par_defaut[k] = dico_tl["toutBloc"][k]
     #
-    valeurs_par_defaut = {"couleurFond": "black!50",
-                          "couleurTitre": "white",
-                          "texteTitre": "",
-                          "largeurCadre": str(h),
-                          "hauteurCadre": str(v),
-                          "remplirCadre": False,
-                          "texteCadre": ""}
-
+    # images : valeur par défaut script
+    images_valeurs_par_defaut_script = {
+        "xoffset": "0",
+        "yoffset": "0",
+        "position": "east"
+    }
+    # images : valeur par défaut utilisateur
+    images_valeurs_par_defaut = images_valeurs_par_defaut_script.copy()
+    if "touteImage" in dico_tl:
+        for k in dico_tl["touteImage"]:
+            images_valeurs_par_defaut[k] = dico_tl["touteImage"][k]
+    #
+    #
     for i in range(longueur):
         dico_element = dico_tl["contenu"][i]
         #
-        valeurs_par_defaut["hauteurTrait"] = -5 if i % 2 else -2.5
         valeurs = valeurs_par_defaut.copy()
-        for k in valeurs_par_defaut:
+        #
+        #
+        if "hauteurTrait" not in valeurs:
+            valeurs["hauteurTrait"] = -5 if i % 2 else -2.5
+        if "formeBloc" not in valeurs_par_defaut:
+            if i == 0:
+                valeurs["formeBloc"] = "debut"
+            elif i == longueur - 1:
+                valeurs["formeBloc"] = "fin"
+            else:
+                valeurs["formeBloc"] = "milieu"
+        # valeurs à transformer selon le bloc particulier
+        for k in valeurs:
             valeurs[k] = dico_element.get(k, valeurs[k])
         #
         # trait est à traiter à part... compte tenu de sa valeur
         # par défaut.
-        depart_trait = 0
-        arrivee_trait = float(valeurs["hauteurTrait"])
+        depart_trait = float(valeurs["yoffset"])
+        arrivee_trait = depart_trait + float(valeurs["hauteurTrait"])
         ancre = "north"
         if arrivee_trait > 0:
             # on oriente le trait vers le haut
             # du coup ça change l'ancrage en destination
             # et le point de départ aussi
-            arrivee_trait += v
-            depart_trait = v
+            arrivee_trait += dim_globales["hauteurBloc"]
+            depart_trait += dim_globales["hauteurBloc"]
+            #
+        centre_h = position[0] +\
+            float(valeurs["xoffset"]) +\
+            float(valeurs["largeurBloc"]) / 2
         #
-        centre_h = position[0] + h / 2
-        #
-        # la forme du timeline
-        fh.write(tlLTX.bloc(commande[i], position, h, v, f, valeurs))
+        # BLOC DE TITRE
+        fh.write(tlLTX.bloc((position[0] + float(valeurs["xoffset"]),
+                             position[1] + float(valeurs["yoffset"])),
+                            dim_globales, valeurs))
         # le titre
         if i != 0:
-            centre_h += f / 2
-        fh.write(tlLTX.chaine_titre(centre_h, position[1] + v / 2,
-                                    h,
+            centre_h += dim_globales["largeurFleche"] / 2
+        fh.write(tlLTX.chaine_titre(centre_h,
+                                    position[1]
+                                    + float(valeurs["yoffset"])
+                                    + dim_globales["hauteurBloc"] / 2,
+                                    dim_globales["largeurBloc"],
                                     noeud,
                                     valeurs))
         noeud += 1
-        # le cadre
+        # CADRE
         fh.write(tlLTX.cadre(centre_h, arrivee_trait, noeud, valeurs))
-        # la liaison
+        # LIAISON BLOC/CADRE
         if arrivee_trait > 0:
             ancre = "south"
         else:
             ancre = "north"
         fh.write(tlLTX.liaison(f"{centre_h},{depart_trait}",
-                                   f"{noeud}.{ancre}", valeurs))
-        # traitement présence d'une image
+                               f"{noeud}.{ancre}", valeurs))
+        #
+        # IMAGE
         if 'imageCadre' in dico_element:
             dico_image = dico_element["imageCadre"]
-            # valeurs par défaut
-            if "xoffset" in dico_image:
-                xoffset = dico_image["xoffset"]
-            else:
-                xoffset = "0"
             #
-            if "yoffset" in dico_image:
-                yoffset = dico_image["yoffset"]
-            else:
-                yoffset = "0"
-            #
-            if "largeur" in dico_image:
-                image_largeur = dico_image["largeur"]
-            else:
-                image_largeur = str(.25 * float(valeurs["largeurCadre"]))
-            #
-            if "position" in dico_image:
-                image_position = dico_image["position"]
-            else:
-                image_position = "east"
+            # valeur par défaut dynamiques si elle n'existe pas
+            # chez les valeurs par défaut utilisateur
+            if "largeur" not in images_valeurs_par_defaut:
+                images_valeurs_par_defaut["largeur"] = \
+                    str(.25 * float(valeurs["largeurCadre"]))
+            # application valeurs individuelles
+            images_valeurs = images_valeurs_par_defaut.copy()
+            for k in dico_image:
+                images_valeurs[k] = dico_image[k]
             ##
-            fh.write(tlLTX.image(dico_image["fichier"], noeud,
-                                 image_position, image_largeur,
-                                 xoffset, yoffset))
-        # traitement qrcode
+            fh.write(tlLTX.image(images_valeurs, noeud))
+            #
+        # traitement QRCODE
         if "url" in dico_element:
             url = dico_element["url"]
             nb_qrcode += 1
@@ -140,23 +187,33 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
             nom_fichier = f"qrcode_{nb_qrcode}.png"
             qr.png(os.path.join(dir_sortie, nom_fichier))
             #
-            largeur_qr = min(h, float(valeurs["largeurCadre"]))
+            largeur_qr = min(dim_globales["hauteurBloc"],
+                             float(valeurs["largeurCadre"]))
             if arrivee_trait > 0:
                 ancre = "north"
                 yoffset = str(largeur_qr / 2)
             else:
                 ancre = "south"
                 yoffset = str(-largeur_qr / 2)
-                #
-            fh.write(tlLTX.image(nom_fichier,
-                                 noeud,
-                                 ancre,
-                                 str(largeur_qr),
-                                 "0",
-                                 yoffset))
+            #
+            dico_image_url = {
+                "fichier": nom_fichier,
+                "position": ancre,
+                "xoffset": "0",
+                "yoffset": yoffset,
+                "largeur": str(largeur_qr)
+            }
+            fh.write(tlLTX.image(dico_image_url, noeud))
             #
         noeud += 1
-        position[0] += h + e
+        #
+        # fh.write(r"\draw (current bounding box.north west) --
+        # (current bounding box.south east);")
+        #
+        increment = dim_globales["incrementBloc"]
+        if "largeurBloc" in dico_element:
+            increment = float(valeurs["largeurBloc"])
+        position[0] += increment + dim_globales["espaceInterBloc"]
     fh.write(footer)
 
 # Partie compilation

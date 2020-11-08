@@ -1,0 +1,141 @@
+{
+    "largeurBloc": "4",
+    "hauteurBloc": 1,
+    "espaceInterBloc": ".1",
+    "largeurFleche": ".15",
+    "codeComplement": [
+        "\\definecolor{dem}{RGB}{40,149,214}",
+        "\\definecolor{rep}{RGB}{219,16,53}"
+    ],
+    "contenu": [
+        {
+            "texteTitre": "1901",
+            "texteCadre": "Théodore\\\\ROOSEVELT",
+            "couleurFond": "rep",
+            "largeurCadre": "2.5"
+        },
+        {
+            "texteTitre": "1909",
+            "texteCadre": "William H.\\\\TAFT",
+            "largeurBloc": "2",
+            "couleurFond": "rep",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1913",
+            "texteCadre": "T. Woodrow\\\\WILSON",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        },
+        {
+            "texteTitre": "\\small 1921",
+            "texteCadre": "Warren G.\\\\HARDING",
+            "largeurBloc": "1",
+            "couleurFond": "rep",
+            "largeurCadre": "1.8",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1923",
+            "texteCadre": "Calvin\\\\COOLIDGE ",
+            "largeurBloc": "3.5",
+            "couleurFond": "rep",
+            "largeurCadre": "2",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1929",
+            "texteCadre": "Herbert\\\\HOOVER",
+            "couleurFond": "rep",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1933",
+            "texteCadre": "Franklin Delano\\\\ROOSEVELT",
+            "largeurBloc": "6",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        },
+        {
+            "texteTitre": "1945",
+            "texteCadre": "Harry S.\\\\TRUMAN",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        },
+        {
+            "texteTitre": "1953",
+            "texteCadre": "Dwight D.\\\\EISENHOWER",
+            "couleurFond": "rep",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "\\small 1961",
+            "texteCadre": "John Fitzgerald\\\\KENNEDY",
+            "largeurBloc": "1",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        },
+        {
+            "texteTitre": "1963",
+            "texteCadre": "Lyndon B.\\\\JOHNSON",
+            "largeurBloc": "3",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "1.5"
+        },
+        {
+            "texteTitre": "1969",
+            "texteCadre": "Richard\\\\NIXON",
+            "largeurBloc": "2.5",
+            "couleurFond": "rep",
+            "largeurCadre": "1.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1974",
+            "texteCadre": "Gerald\\\\FORD",
+            "largeurBloc": "1.5",
+            "couleurFond": "rep",
+            "largeurCadre": "1.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1977",
+            "texteCadre": "Jimmy\\\\CARTER",
+            "largeurBloc": "2",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        },
+        {
+            "texteTitre": "1981",
+            "texteCadre": "Ronald\\\\REAGAN",
+            "couleurFond": "rep",
+            "largeurCadre": "2",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1989",
+            "texteCadre": "George H. W.\\\\BUSH",
+            "largeurBloc": "2",
+            "couleurFond": "rep",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "-2.5"
+        },
+        {
+            "texteTitre": "1993",
+            "texteCadre": "Bill\\\\CLINTON",
+            "couleurFond": "dem",
+            "largeurCadre": "2.5",
+            "hauteurTrait": "2.5"
+        }
+        
+        ]
+}
