@@ -48,8 +48,12 @@ ou booléen, valeurs par défaut entre parenthèses) :
 * `texteCadre` : texte de l'encadré (idem) (vide)
 * `largeurCadre` et `hauteurCadre` : dimensions en cm sans l'unité (largeur et hauteur d'un bloc par défaut)
 * `remplirCadre` : booléen JS (true ou false) de remplissage du cadre (`false`)
-* `hauteurTrait` : hauteur de la liaison bloc-cadre, négatif vers
-  le bas et positif vers le haut (`-5` alternant avec `-2.5`) 
+* `positionCadre`: texte précisant la position du cadre associé au
+  bloc, 3 valeurs possibles : `dessus`, `dessous` et `double` (pour
+  les deux) (`dessous`)
+* `hauteurTrait` : hauteur de la liaison bloc-cadre (`5`)
+on peut spécifier une liste de hauteurs qui précise l'alternance à suivre par exemple  `["1", "10.5"]`
+* `formeBloc` DOCUMENTATION À VENIR
 * `url` : url transformé en QRCode au-dessus ou en-dessous du cadre (vide)
 * `imageCadre` : dictionnaire d'intégration d'une image près de l'encadré (vide)
      * `fichier` : fichier image (vide mais obligatoire)

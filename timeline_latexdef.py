@@ -5,8 +5,9 @@ def bloc(position, dico_dim, dico_valeurs):
     #
     forme_bloc = dico_valeurs["formeBloc"]
     couleur_fond = dico_valeurs["couleurFond"]
+    dessin = "fill" if dico_valeurs["remplirBloc"] else "draw"
     #
-    s = fr"\{forme_bloc}"
+    s = fr"\{dessin}{forme_bloc}"
     s += f"(({position[0]},{position[1]}),{h},{v},{f},{couleur_fond})" + "\n"
     return s
 
@@ -36,12 +37,13 @@ def cadre(x, y, noeud, dico_valeurs):
     h_min_size = f"minimum height={hauteur}cm," if texte == "" else ""
     #
     s = fr"\node[draw={couleur}," + remplissage\
-        + f"{w_min_size}{h_min_size}radius=5pt,rounded corners,line width=1bp]"\
+        + f"{w_min_size}{h_min_size}radius=5pt,rounded corners,line width=8bp]"\
         + "\n"
     s += f"({noeud}) at ({x},{y})"
     s += r" {\begin{minipage}{" + largeur + "cm}" + "\n"
     s += texte + "\n"
     s += r"\end{minipage}};" + "\n"
+    #
     return s
 
 

@@ -1,0 +1,36 @@
+{
+    "largeurBloc": "8.5",
+    "hauteurBloc": "8",
+    "espaceInterBloc": "0",
+    "largeurFleche": "4",
+    "toutBloc": {
+        "largeurCadre": "14",
+        "hauteurCadre": "8",
+        "couleurFond": "black",
+        "positionCadre": "double",
+        "formeBloc": "milieuSansFleche",
+        "hauteurTrait": ["10.5", "1"]
+    },
+    "contenu": [
+        {
+            "formeBloc": "debutSansFleche",
+            "positionCadre": "",
+            "largeurBloc": 3
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+            "formeBloc": "finSansFleche",
+            "positionCadre": "",
+            "largeurBloc": 3
+        }
+    ]
+}
