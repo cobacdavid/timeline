@@ -37,7 +37,7 @@ def cadre(x, y, noeud, dico_valeurs):
     h_min_size = f"minimum height={hauteur}cm," if texte == "" else ""
     #
     s = fr"\node[draw={couleur}," + remplissage\
-        + f"{w_min_size}{h_min_size}radius=5pt,rounded corners,line width=8bp]"\
+        + f"{w_min_size}{h_min_size}radius=5pt,rounded corners,line width=1mm]"\
         + "\n"
     s += f"({noeud}) at ({x},{y})"
     s += r" {\begin{minipage}{" + largeur + "cm}" + "\n"

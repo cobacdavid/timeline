@@ -3,11 +3,16 @@
     "hauteurBloc":     "1",
     "largeurFleche":   "0.5",
     "espaceInterBloc": "0.1",
+    "toutBloc": {
+        "couleurTitre": "black",
+        "hauteurTrait": ["0", "2.2"],
+        "couleurTitre": "white",
+        "remplirBloc": true
+    },
     "contenu": [
         {
             "texteTitre":   "1968",
             "texteCadre":   "\\textbf{Naissance d'ARPANET}  (DoD)",
-            "hauteurTrait": "1",
             "largeurCadre": "4",
             "remplirCadre": true,
             "couleurFond":  "pink!60"
@@ -45,8 +50,8 @@
         {
             "texteTitre":   "1980",
             "texteCadre":   "Vinton \\textsc{Cerf} propose l'interconnexion des réseaux existants~: \\textbf{naissance de l'Internet}",
-            "hauteurTrait": "1",
             "largeurCadre": "6",
+            "positionCadre": "dessus",
             "remplirCadre": true,
             "couleurFond":  "red!70",
             "url":          "https://fr.wikipedia.org/wiki/Histoire_d%27Internet#Unification_des_r%C3%A9seaux_et_la_cr%C3%A9ation_d%E2%80%99Internet",
@@ -66,8 +71,16 @@
         {
             "texteTitre":   "1984",
             "texteCadre":   "Modèle OSI\\\\en 7 couches",
-            "largeurCadre": "2.5",
-            "couleurFond":  "red!70"
+            "largeurBloc": "5",
+            "largeurCadre": "4",
+            "couleurFond":  "red!70",
+            "imageCadre": {
+                "fichier": "osi.png",
+                "largeur": "3",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+            
         },
         {
             "texteTitre":   "1987",
@@ -79,6 +92,9 @@
             "texteTitre":   "1989",
             "texteCadre":   "Internet relie\\\\100 000 machines\\\\Naissance du \\textbf{WWW}\\\\Début d'Internet grand public",
             "largeurCadre": "3",
+            "hauteurTrait": "1",
+            "largeurCadre": "5",
+            "positionCadre": "dessus",
             "couleurFond":  "red!70"
         },
         {
@@ -88,14 +104,24 @@
             "couleurFond":  "blue!50!green"
         },
         {
+            "texteTitre":  "1993",
+            "texteCadre":  "Naissance du HTML",
+            "couleurFond": "blue!50!green"
+        },
+        {
             "texteTitre":  "1995",
             "texteCadre":  "Internet relie\\\\2 000 000 machines\\\\Ethernet 100 Mb/s",
-            "couleurFond": "blue!50!green"
+            "positionCadre": "dessus",
+            "hauteurTrait": "1",
+            "couleurFond": "blue!50!green",
+            "largeurCadre": "3.5"
         },
         {
             "texteTitre":  "1996",
             "texteCadre":  "Internet relie\\\\10 000 000 machines\\\\Naissance du HTML",
-            "couleurFond": "blue!50!green"
+            "couleurFond": "blue!50!green",
+            "hauteurTrait": "0",
+            "largeurCadre": "3.5"
         },
         {
             "texteTitre":   "1998",
@@ -107,14 +133,6 @@
             "texteTitre":  "1999",
             "texteCadre" : "Naissance de Google",
             "couleurFond": "blue!50!green"
-        },
-        {
-            "largeurCadre": "3.5"
-        },
-        {
-            "largeurCadre": "3.5",
-            "hauteurCadre": "3.5"
-        },
-        {}
+        }
     ]
 }

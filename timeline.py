@@ -120,6 +120,8 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
         # valeurs à transformer selon le bloc particulier
         for k in valeurs:
             valeurs[k] = dico_element.get(k, valeurs[k])
+        if "hauteurTrait" in dico_element:
+            v_hT = dico_element["hauteurTrait"]
         #
         # trait est à traiter à part... compte tenu de sa valeur
         # par défaut.
@@ -197,7 +199,7 @@ with open(os.path.join(dir_sortie, f"{nom_fichier}_timeline.tex"), "w") as fh:
             #
             largeur_qr = min(dim_globales["hauteurBloc"],
                              float(valeurs["largeurCadre"]))
-            if arrivee_trait > 0:
+            if arrivee_trait_dessus > 0:
                 ancre = "north"
                 yoffset = str(largeur_qr / 2)
             else:

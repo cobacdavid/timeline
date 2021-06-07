@@ -1,0 +1,178 @@
+{
+    "largeurBloc":     "3",
+    "hauteurBloc":     "1.5",
+    "largeurFleche":   "0.5",
+    "espaceInterBloc": "0.1",
+    "codeComplement": [
+        "\\definecolor{machine}{RGB}{40,149,214}"
+    ],
+    "toutBloc": {
+        "couleurTitre": "black",
+        "hauteurTrait": ["0", "2.2"],
+        "couleurFond":  "machine",
+        "couleurTitre": "white",
+        "remplirBloc": true
+    },
+    "contenu": [
+        {
+            "texteTitre":   "1801",
+            "texteCadre":   "Métier à tisser\\par à cartes perforées",
+            "imageCadre": {
+                "fichier": "Jacquard.jpg",
+                "largeur": "2",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "1843",
+            "texteCadre":   "Ada Lovelace\\par Calcul des nombres de Bernoulli",
+            "imageCadre": {
+                "fichier": "ada_lovelace.png",
+                "largeur": "2.2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "\\textasciitilde\\, 1930",
+            "texteCadre":   "Premières machines programmables\\par Calculateurs",
+            "couleurFond":  "black"
+        },
+        {
+            "texteTitre":   "1936",
+            "texteCadre":   "Machine de Turing",
+            "couleurFond":  "black",
+            "imageCadre": {
+                "fichier": "turing.jpg",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1943",
+            "texteCadre":   "Plankalkül~: 1er langage haut niveau"
+        },
+        {
+            "texteTitre":   "1945",
+            "texteCadre":   "Architecture de Von Neumann",
+            "couleurFond":  "black",
+            "imageCadre": {
+                "fichier": "von_neumann.jpg",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1948",
+            "texteCadre":   "Premier programme enregistré\\par dans une machine"
+        },
+        {
+            "texteTitre":   "1958",
+            "texteCadre":   "LISP (début de la programmation fonctionnelle)",
+            "imageCadre": {
+                "fichier": "lisp.png",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1959",
+            "texteCadre":   "COBOL"
+        },
+        {
+            "texteTitre":   "1964",
+            "texteCadre":   "BASIC"
+        },
+         {
+            "texteTitre":   "1967",
+            "texteCadre":   "Logo"
+        },
+        {
+            "texteTitre":   "1970",
+            "texteCadre":   "Pascal"
+        },
+        {
+            "texteTitre":   "1972",
+            "texteCadre":   "C (D. Ritchie/B. Kernighan) \\par Smalltalk (début de la POO)",
+            "largeurCadre": "5",
+            "imageCadre": {
+                "fichier": "c.png",
+                "largeur": "2",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "1974",
+            "texteCadre":   "SQL"
+        },
+        {
+            "texteTitre":   "1980",
+            "texteCadre":   "Ada"
+        },
+        {
+            "texteTitre":   "1981",
+            "texteCadre":   "IBM PC",
+            "couleurFond":  "black"
+        },
+        {
+            "texteTitre":   "1983",
+            "texteCadre":   "C++"
+        },
+        {
+            "texteTitre":   "1987",
+            "texteCadre":   "Perl",
+            "imageCadre": {
+                "fichier": "perl.png",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1989",
+            "texteCadre":   "Python (G. Van Rossum)",
+            "imageCadre": {
+                "fichier": "guido.jpg",
+                "largeur": "2",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "1993",
+            "texteCadre":   "HTML (T. Berners-Lee)\\par Lua",
+            "largeurCadre": "4",
+            "imageCadre": {
+                "fichier": "berners_lee.jpg",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1995",
+            "texteCadre":   "Java\\par Javascript\\par PHP",
+            "imageCadre": {
+                "fichier": "java.png",
+                "largeur": "1.5",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "2003",
+            "texteCadre":   "Scratch",
+            "imageCadre": {
+                "fichier": "scratch.jpg",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        }
+    ]
+}

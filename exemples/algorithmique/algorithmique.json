@@ -1,0 +1,140 @@
+{
+    "largeurBloc":     "3",
+    "hauteurBloc":     "1",
+    "largeurFleche":   "0.5",
+    "espaceInterBloc": "0.1",
+    "codeComplement": [
+        "\\definecolor{machine}{RGB}{40,149,214}",
+        "\\definecolor{rouge}{RGB}{219,16,53}"
+    ],
+    "toutBloc": {
+        "couleurTitre": "white",
+        "couleurFond": "machine",
+        "remplirBloc": true,
+        "hauteurTrait": ["0", "2.2"]
+    },
+    "contenu": [
+        {
+            "texteTitre":   "\\textasciitilde\\,-2500",
+            "texteCadre":   "Mésopotamie\\par Algorithme de division ",
+            "couleurFond": "rouge",
+            "largeurCadre": "4.5",
+            "imageCadre": {
+                "fichier": "mesopotamie.png",
+                "largeur": "3.5",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "\\textasciitilde\\,-1500",
+            "texteCadre":   "Égype\\par Papyrus Rhind\\par Arithmétique ",
+            "couleurFond": "rouge",
+            "largeurBloc": "4.5",
+            "imageCadre": {
+                "fichier": "rhind.jpg",
+                "largeur": "2.2",
+                "position": "north",
+                "yoffset": "1"
+            }
+        },
+        {
+            "texteTitre":   "\\textasciitilde\\,-300",
+            "texteCadre":   "PGCD d'Euclide (livre VII)\\par Résolution d'équations\\par sur exemples",
+            "largeurCadre": "5",
+            "couleurFond": "rouge",
+            "imageCadre": {
+                "fichier": "elements.jpg",
+                "largeur": "3",
+                "position": "south",
+                "yoffset": "-1"
+            }
+        },
+        {
+            "texteTitre":  "\\textasciitilde\\,850",
+            "texteCadre": "Al-Khwârizmî\\par Résolution générale d'équations",
+            "couleurFond": "rouge",
+            "largeurBloc": "4.5",
+            "imageCadre": {
+                "fichier": "alkhwa.jpg",
+                "largeur": "1.5",
+                "position": "north",
+                "yoffset": "1.3"
+            }
+        },
+        {
+            "texteTitre":  "1735",
+            "texteCadre": "Graphes\\par Leonhard Euler\\par 7 ponts de Königsberg",
+            "largeurCadre": "5",
+            "imageCadre": {
+                "fichier": "ponts.png",
+                "largeur": "3",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":  "1860",
+            "texteCadre": "Arbres\\par Arthur Cayley",
+            "largeurBloc": "4.5",
+            "imageCadre": {
+                "fichier": "cayley.jpg",
+                "largeur": "1.5",
+                "position": "north",
+                "yoffset": "1.3"
+            }
+        },
+        {
+            "texteTitre":  "1945",
+            "texteCadre": "Tri fusion\\par par Von Neumann"
+        },
+        {
+            "texteTitre":  "1950",
+            "texteCadre": "Concept de programmation dynamique"
+        },
+        {
+            "texteTitre":  "1951",
+            "texteCadre": "k-ppv\\par Evelyn Fix et Joseph Hodges",
+            "largeurCadre": "5",
+            "largeurBloc": "4",
+            "imageCadre": {
+                "fichier": "evelyn_fix.jpg",
+                "largeur": "2",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":  "1958",
+            "texteCadre": "LISP autorise la récursivité\\par Algorithme du perceptron\\par (F. Rosenblatt)",
+            "largeurCadre": "4.5",
+            "imageCadre": {
+                "fichier": "rosenblatt.jpg",
+                "largeur": "1.7",
+                "position": "north",
+                "yoffset": "1.2"
+            }
+        },
+        {
+            "texteTitre":  "1959",
+            "texteCadre": "Algorithme de Dijkstra",
+            "largeurBloc": "4",
+            "imageCadre": {
+                "fichier": "dijkstra.jpg",
+                "largeur": "2",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":  "1977",
+            "texteCadre": "Algorithme de Boyer-Moore",
+            "imageCadre": {
+                "fichier": "moore.jpg",
+                "largeur": "2",
+                "position": "north",
+                "yoffset": "1.3"
+            }
+        }
+    ]
+}
