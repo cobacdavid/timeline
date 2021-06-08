@@ -17,38 +17,38 @@
         {
             "texteTitre":   "\\textasciitilde\\,-2500",
             "texteCadre":   "Mésopotamie\\par Algorithme de division ",
-            "couleurFond": "rouge",
             "largeurCadre": "4.5",
             "imageCadre": {
                 "fichier": "mesopotamie.png",
                 "largeur": "3.5",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "gray!50"
         },
         {
             "texteTitre":   "\\textasciitilde\\,-1500",
             "texteCadre":   "Égype\\par Papyrus Rhind\\par Arithmétique ",
-            "couleurFond": "rouge",
             "largeurBloc": "4.5",
             "imageCadre": {
                 "fichier": "rhind.jpg",
                 "largeur": "2.2",
                 "position": "north",
                 "yoffset": "1"
-            }
+            },
+            "couleurFond":  "gray!50"
         },
         {
             "texteTitre":   "\\textasciitilde\\,-300",
             "texteCadre":   "PGCD d'Euclide (livre VII)\\par Résolution d'équations\\par sur exemples",
             "largeurCadre": "5",
-            "couleurFond": "rouge",
             "imageCadre": {
                 "fichier": "elements.jpg",
                 "largeur": "3",
                 "position": "south",
                 "yoffset": "-1"
-            }
+            },
+            "couleurFond":  "gray!50"
         },
         {
             "texteTitre":  "\\textasciitilde\\,850",
@@ -60,7 +60,8 @@
                 "largeur": "1.5",
                 "position": "north",
                 "yoffset": "1.3"
-            }
+            },
+            "couleurFond":  "gray!58"
         },
         {
             "texteTitre":  "1735",
@@ -71,7 +72,8 @@
                 "largeur": "3",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "gray!67"
         },
         {
             "texteTitre":  "1860",
@@ -82,15 +84,18 @@
                 "largeur": "1.5",
                 "position": "north",
                 "yoffset": "1.3"
-            }
+            },
+            "couleurFond":  "gray!68"
         },
         {
             "texteTitre":  "1945",
-            "texteCadre": "Tri fusion\\par par Von Neumann"
+            "texteCadre": "Tri fusion\\par par Von Neumann",
+            "couleurFond": "yellow!50!black"
         },
         {
             "texteTitre":  "1950",
-            "texteCadre": "Concept de programmation dynamique"
+            "texteCadre": "Concept de programmation dynamique",
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":  "1951",
@@ -102,7 +107,8 @@
                 "largeur": "2",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":  "1958",
@@ -113,7 +119,8 @@
                 "largeur": "1.7",
                 "position": "north",
                 "yoffset": "1.2"
-            }
+            },
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":  "1959",
@@ -124,7 +131,8 @@
                 "largeur": "2",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":  "1977",
@@ -134,7 +142,8 @@
                 "largeur": "2",
                 "position": "north",
                 "yoffset": "1.3"
-            }
+            },
+            "couleurFond":  "orange!60"
         }
     ]
 }

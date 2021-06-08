@@ -22,7 +22,8 @@
                 "largeur": "2",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "gray!68"
         },
         {
             "texteTitre":   "1843",
@@ -32,7 +33,8 @@
                 "largeur": "2.2",
                 "position": "north",
                 "yoffset": "1.5"
-            }
+            },
+            "couleurFond":  "gray!68"
         },
         {
             "texteTitre":   "\\textasciitilde\\, 1930",
@@ -52,7 +54,8 @@
         },
         {
             "texteTitre":   "1943",
-            "texteCadre":   "Plankalkül~: 1er langage haut niveau"
+            "texteCadre":   "Plankalkül~: 1er langage haut niveau",
+            "couleurFond": "yellow!50!black"
         },
         {
             "texteTitre":   "1945",
@@ -67,7 +70,8 @@
         },
         {
             "texteTitre":   "1948",
-            "texteCadre":   "Premier programme enregistré\\par dans une machine"
+            "texteCadre":   "Premier programme enregistré\\par dans une machine",
+            "couleurFond": "yellow!50!black"
         },
         {
             "texteTitre":   "1958",
@@ -77,23 +81,28 @@
                 "largeur": "2",
                 "position": "north",
                 "yoffset": "1.5"
-            }
+            },
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":   "1959",
-            "texteCadre":   "COBOL"
+            "texteCadre":   "COBOL",
+            "couleurFond": "red!60!black"
         },
         {
             "texteTitre":   "1964",
-            "texteCadre":   "BASIC"
+            "texteCadre":   "BASIC",
+            "couleurFond":  "pink!60"
         },
          {
             "texteTitre":   "1967",
-            "texteCadre":   "Logo"
+             "texteCadre":   "Logo",
+             "couleurFond":  "pink!60"
         },
         {
             "texteTitre":   "1970",
-            "texteCadre":   "Pascal"
+            "texteCadre":   "Pascal",
+            "couleurFond":  "orange!60"
         },
         {
             "texteTitre":   "1972",
@@ -104,15 +113,18 @@
                 "largeur": "2",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "orange!60"
         },
         {
             "texteTitre":   "1974",
-            "texteCadre":   "SQL"
+            "texteCadre":   "SQL",
+            "couleurFond":  "orange!60"
         },
         {
             "texteTitre":   "1980",
-            "texteCadre":   "Ada"
+            "texteCadre":   "Ada",
+            "couleurFond":  "red!70"
         },
         {
             "texteTitre":   "1981",
@@ -121,7 +133,8 @@
         },
         {
             "texteTitre":   "1983",
-            "texteCadre":   "C++"
+            "texteCadre":   "C++",
+            "couleurFond":  "red!70"
         },
         {
             "texteTitre":   "1987",
@@ -131,7 +144,8 @@
                 "largeur": "2",
                 "position": "north",
                 "yoffset": "1.5"
-            }
+            },
+            "couleurFond":  "red!70"
         },
         {
             "texteTitre":   "1989",
@@ -141,7 +155,8 @@
                 "largeur": "2",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "red!70"
         },
         {
             "texteTitre":   "1993",
@@ -152,7 +167,8 @@
                 "largeur": "2",
                 "position": "north",
                 "yoffset": "1.5"
-            }
+            },
+            "couleurFond":  "blue!50!green"
         },
         {
             "texteTitre":   "1995",
@@ -162,7 +178,8 @@
                 "largeur": "1.5",
                 "position": "south",
                 "yoffset": "-1.5"
-            }
+            },
+            "couleurFond":  "blue!50!green"
         },
         {
             "texteTitre":   "2003",

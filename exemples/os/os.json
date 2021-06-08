@@ -1,0 +1,232 @@
+{
+    "largeurBloc":     "5",
+    "hauteurBloc":     "1.5",
+    "largeurFleche":   "0.5",
+    "espaceInterBloc": "0.1",
+    "codeComplement": [
+        "\\definecolor{machine}{RGB}{40,149,214}"
+    ],
+    "toutBloc": {
+        "couleurTitre": "black",
+        "hauteurTrait": ["0", "3"],
+        "couleurFond":  "machine",
+        "couleurTitre": "white",
+        "remplirBloc": true
+    },
+    "contenu": [
+        {
+            "texteTitre":   "1956",
+            "texteCadre":   "GM-NAA I/O\\par par IBM et pour IBM704\\par 1 programme à la fois\\dots",
+            "couleurFond": "red!60!black",
+            "imageCadre": {
+                "fichier": "ibm704.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.7"
+            }
+        },
+        {
+            "texteTitre":   "1966",
+            "texteCadre":   "OS/360 et DOS/360\\par par IBM et pour IBM System/360",
+            "couleurFond":  "pink!60",
+            "imageCadre": {
+                "fichier": "sys360.jpg",
+                "largeur": "3.7",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1967",
+            "texteCadre":   "TOPS-10\\par par Digital Equipment Corporation\\par pour PDP-10",
+            "couleurFond":  "pink!60",
+            "imageCadre": {
+                "fichier": "pdp10.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "1969",
+            "texteCadre":   "MULTICS par le MIT\\par UNICS par Ken Thompson, Dennis Ritchie, Douglas McIlroy, et Joe Ossanna\\par UNICS est écrit en Assembleur",
+            "couleurFond": "pink!60"
+        },
+        {
+            "texteTitre":   "1971",
+            "texteCadre":   "UNIX",
+            "couleurFond": "orange!60",
+            "largeurBloc": "3",
+            "largeurCadre": "1"
+        },
+        {
+            "texteTitre":   "1974",
+            "texteCadre":   "UNIX est ré-écrit en C\\par pour le PDP-11\\par GEOS pour Commodore 64 et Apple II",
+            "couleurFond": "orange!60",
+            "imageCadre": {
+                "fichier": "pdp11.jpg",
+                "largeur": "3.7",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1979",
+            "texteCadre":   "Sinclair BASIC\\par par Sinclair Research pour ZX-81",
+            "couleurFond": "orange!60",
+            "imageCadre": {
+                "fichier": "zx81.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-3"
+            }
+            
+        },
+        {
+            "texteTitre":   "Années 80",
+            "texteCadre":   "Multitude de dérivés d'UNIX :\\par HP-UX, Solaris, AIX, MINIX etc.",
+            "couleurFond": "red!70"
+        },
+        {
+            "texteTitre":   "1981",
+            "texteCadre":   "MS/DOS\\par Microsoft\\par pour IBM PC",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "msdos.png",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-2"
+            }
+        },
+        {
+            "texteTitre":   "1983",
+            "texteCadre":   "Projet GNU\\par par R. Stallman",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "stallman.jpg",
+                "largeur": "3.7",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1984",
+            "texteCadre":   "Classic Mac OS\\par par Apple Computer Inc.\\par pour Macintosh",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "macos.png",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.5"
+            }
+        },
+        {
+            "texteTitre":   "1985",
+            "texteCadre":   "Microsoft Windows\\par AmigaOS par Commodore pour Amiga",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "windows.png",
+                "largeur": "3.6",
+                "position": "north",
+                "yoffset": "2"
+            }
+        },
+        {
+            "texteTitre":   "1987",
+            "texteCadre":   "MINIX\\par OS/2 par IBM et Microsoft",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "os2.png",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-2"
+            }
+        },
+        {
+            "texteTitre":   "1989",
+            "texteCadre":   "EPOC\\par par Psion pour PDA",
+            "couleurFond": "red!70",
+            "imageCadre": {
+                "fichier": "epoc.jpg",
+                "largeur": "4",
+                "position": "north",
+                "yoffset": "1.7"
+            }
+        },
+        {
+            "texteTitre":   "1991",
+            "texteCadre":   "Linux par Linus Torvalds",
+            "couleurFond": "blue!50!green",
+            "imageCadre": {
+                "fichier": "linus.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.7"
+            }
+        },
+        {
+            "texteTitre":   "1993",
+            "texteCadre":   "Microsoft Windows NT",
+            "couleurFond": "blue!50!green",
+            "imageCadre": {
+                "fichier": "windowsNT.png",
+                "largeur": "4",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "1996",
+            "texteCadre":   "Microsoft Windows CE",
+            "couleurFond": "blue!50!green",
+            "imageCadre": {
+                "fichier": "pocketpc.jpg",
+                "largeur": "3.5",
+                "position": "south",
+                "yoffset": "-3"
+            }
+        },
+        {
+            "texteTitre":   "2001",
+            "texteCadre":   "macOS\\par par Apple",
+            "imageCadre": {
+                "fichier": "macos_2.png",
+                "largeur": "4",
+                "position": "north",
+                "yoffset": "1.5"
+            }
+        },
+        {
+            "texteTitre":   "2007",
+            "texteCadre":   "IPhone OS\\par par Apple pour IPhone",
+            "imageCadre": {
+                "fichier": "iphone1.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.7"
+            }
+        },
+        {
+            "texteTitre":   "2008",
+            "texteCadre":   "Android\\par par Google",
+            "hauteurTrait": "5",
+            "imageCadre": {
+                "fichier": "android.jpg",
+                "largeur": "3.5",
+                "position": "north",
+                "yoffset": "3"
+            }
+        },
+        {
+            "texteTitre":   "2010",
+            "texteCadre":   "Windows Phone\\par par Microsoft",
+            "couleurFond": "green!30!red",
+            "imageCadre": {
+                "fichier": "wphone.jpg",
+                "largeur": "4",
+                "position": "south",
+                "yoffset": "-1.7"
+            }
+        }
+    ]
+}
